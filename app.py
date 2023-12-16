@@ -7,7 +7,7 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "723H623872H7S72jhsjd7887H"
-CORS(app, origins="*")
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route('/')
 def index():
@@ -19,7 +19,7 @@ def login():
     username = data['username']
     password = data['password']
     
-    return f"Se conecta, el usuario es: {username} y su clave es {password}"
+    return jsonify(message = f"Se conecta, el usuario es: {username} y su clave es {password}")
 
 if __name__ == '__main__':
     load_dotenv()

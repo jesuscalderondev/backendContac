@@ -7,6 +7,8 @@ import psycopg2
 from os import getenv
 from dotenv import load_dotenv
 
+load_dotenv()
+
 hostname = getenv('HOSTNAME')
 db = getenv('DATABASE')
 user = getenv('USER')
