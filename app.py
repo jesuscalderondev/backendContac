@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, Blueprint, request
-from flask_jwt import JWT, jwt_required, current_identity
+#from flask_jwt import JWT, jwt_required, current_identity
 from database import *
 from os import getenv
 from dotenv import load_dotenv
