@@ -22,4 +22,4 @@ def login():
 if __name__ == '__main__':
     load_dotenv()
     Base.metadata.create_all(engine)
-    app.run(debug=True)
+    app.run(debug=True, port=getenv('PORT'))
