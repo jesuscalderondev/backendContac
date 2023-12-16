@@ -1,0 +1,1 @@
+from werkzeug.security import generate
