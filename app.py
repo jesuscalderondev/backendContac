@@ -3,9 +3,11 @@ from flask import Flask, jsonify, Blueprint, request
 from database import *
 from os import getenv
 from dotenv import load_dotenv
+from flask_cors import CORS
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "723H623872H7S72jhsjd7887H"
+CORS(app, origins="*")
 
 @app.route('/')
 def index():
