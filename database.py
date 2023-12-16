@@ -11,7 +11,7 @@ hostname = getenv('HOSTNAME')
 db = getenv('DATABASE')
 user = getenv('USER')
 password = getenv('PASSWORD')
-port = getenv('PORT')
+port = getenv('PORTDB')
 
 engine = create_engine(f'postgresql://{user}:{password}@{hostname}:{port}/{db}')
 Session = sessionmaker(bind=engine)
